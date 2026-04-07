@@ -128,7 +128,7 @@ Let's make a simple aggregation, please write a SQL statement that returns perso
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Please modify an SQL statement from Exercise 00 and return a person name (not an identifier). Additional clause is we need to see only top 4 people with maximum visits in each pizzerias and sorted by a person name. See the example of output data below.
+Please modify an SQL statement from Exercise 00 and return a person name (not an identifier). Additional clause is we need to see only top 4 people with the highest number of visits to all pizzerias and sorted by a person name. See the example of output data below.
 
 | name | count_of_visits |
 | ------ | ------ |
