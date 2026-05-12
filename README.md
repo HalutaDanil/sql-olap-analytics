@@ -32,18 +32,6 @@ OLAP operations: multidimensional analysis, groupings, aggregates, and analytica
 | ex08 | LEAD/LAG for time series |
 | ex09 | Complex analytical report |
 
-### 🚀 Quick Start
-
-```sql
--- Sales by month (rows to columns)
-SELECT 
-    pizza_name,
-    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,
-    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,
-    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar
-FROM sales
-GROUP BY pizza_name;
-```
 
 ---
 
@@ -75,18 +63,6 @@ OLAP-операции: многомерный анализ, группировк
 | ex08 | LEAD/LAG для временных рядов |
 | ex09 | Сложный аналитический отчёт |
 
-### 🚀 Быстрый старт
-
-```sql
--- Продажи по месяцам (строки в столбцы)
-SELECT 
-    pizza_name,
-    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,
-    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,
-    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar
-FROM sales
-GROUP BY pizza_name;
-```
 
 ---
 
