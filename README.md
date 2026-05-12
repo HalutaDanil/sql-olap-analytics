@@ -19,11 +19,31 @@ OLAP operations: multidimensional analysis, groupings, aggregates, and analytica
 
 ### ✨ Features
 
-| Exercise | Topic |\n|----------|-------|\n| ex00 | ROLLUP — subtotals |\n| ex01 | CUBE — all combinations |\n| ex02 | GROUPING SETS |\n| ex03 | GROUPING() function |\n| ex04 | PIVOT via CASE |\n| ex05 | UNPIVOT |\n| ex06 | Window frames |\n| ex07 | RATIO_TO_REPORT |\n| ex08 | LEAD/LAG for time series |\n| ex09 | Complex analytical report |
+| Exercise | Topic |
+|----------|-------|
+| ex00 | ROLLUP — subtotals |
+| ex01 | CUBE — all combinations |
+| ex02 | GROUPING SETS |
+| ex03 | GROUPING() function |
+| ex04 | PIVOT via CASE |
+| ex05 | UNPIVOT |
+| ex06 | Window frames |
+| ex07 | RATIO_TO_REPORT |
+| ex08 | LEAD/LAG for time series |
+| ex09 | Complex analytical report |
 
 ### 🚀 Quick Start
 
-```sql\n-- Sales by month (rows to columns)\nSELECT \n    pizza_name,\n    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,\n    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,\n    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar\nFROM sales\nGROUP BY pizza_name;\n```
+```sql
+-- Sales by month (rows to columns)
+SELECT 
+    pizza_name,
+    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,
+    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,
+    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar
+FROM sales
+GROUP BY pizza_name;
+```
 
 ---
 
@@ -42,11 +62,31 @@ OLAP-операции: многомерный анализ, группировк
 
 ### ✨ Возможности
 
-| Задача | Тема |\n|--------|------|\n| ex00 | ROLLUP — подытоги |\n| ex01 | CUBE — все комбинации |\n| ex02 | GROUPING SETS |\n| ex03 | Функция GROUPING() |\n| ex04 | PIVOT через CASE |\n| ex05 | UNPIVOT |\n| ex06 | Оконные фреймы |\n| ex07 | RATIO_TO_REPORT |\n| ex08 | LEAD/LAG для временных рядов |\n| ex09 | Сложный аналитический отчёт |
+| Задача | Тема |
+|--------|------|
+| ex00 | ROLLUP — подытоги |
+| ex01 | CUBE — все комбинации |
+| ex02 | GROUPING SETS |
+| ex03 | Функция GROUPING() |
+| ex04 | PIVOT через CASE |
+| ex05 | UNPIVOT |
+| ex06 | Оконные фреймы |
+| ex07 | RATIO_TO_REPORT |
+| ex08 | LEAD/LAG для временных рядов |
+| ex09 | Сложный аналитический отчёт |
 
 ### 🚀 Быстрый старт
 
-```sql\n-- Продажи по месяцам (строки в столбцы)\nSELECT \n    pizza_name,\n    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,\n    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,\n    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar\nFROM sales\nGROUP BY pizza_name;\n```
+```sql
+-- Продажи по месяцам (строки в столбцы)
+SELECT 
+    pizza_name,
+    SUM(CASE WHEN month = 1 THEN amount ELSE 0 END) as jan,
+    SUM(CASE WHEN month = 2 THEN amount ELSE 0 END) as feb,
+    SUM(CASE WHEN month = 3 THEN amount ELSE 0 END) as mar
+FROM sales
+GROUP BY pizza_name;
+```
 
 ---
 
